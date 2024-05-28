@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>User List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; index as i;">
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.password }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.address.address}}, {{ user.address.city }}, {{ user.address.state}}, {{ user.address.postalCode}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
